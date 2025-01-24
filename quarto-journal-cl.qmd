@@ -1,0 +1,72 @@
+---
+author:
+  - name: Harry Potter
+    affiliation:
+      - name: Hogwarts Scholl of Magic and Wizardry
+        department: Gryffindor
+        city: Highlands
+        country: United Kingdom
+        email: harrypotter@hogwarts.edu
+journal:
+  name: Transfiguration Today
+opening: "Dear Editor"
+closing: "Sincerely yours,"
+title: The History of Animagus
+
+reviewers:
+  recommend:
+  - name: Bathilda Bagshot
+    title: Prof.
+    affiliation: Independent Researcher
+    email: bagshot@gmail.com
+  - name: Amos Diggory
+    title: Mr.
+    affiliation: Ministry of Magic
+    email: a.diggory@mcreatures.gov.uk
+  exclude:
+  - name: Voldemort
+    title: Load.
+    affiliation: Death Eater
+    email: load.voldemort@deatheater.com
+  - name: Igor Karkaroff
+    title: Prof.
+    affiliation: Durmstrang Institute
+    email: igor.k@durmstrang.edu
+
+format:
+  jcletter-pdf:
+    execute:
+      eval: true
+      echo: false
+      output: asis
+---
+
+```{r}
+attach(rmarkdown::metadata)
+```
+
+On behalf of my co-authors, I am writing to submit an original article for publication in _`{r} journal$name`_ entitled, "`{r} title`."
+
+In this study, we found the greatest something.
+
+It is very intersting and important thing.
+
+We believe that this paper will be of interest to the readership of `{r} title` because it is very very interesting.
+
+This manuscript has not been published previously in any form, nor is it under consideration by another journal.
+We have read and understand the journal's policies, and neither the manuscript nor the study violates any of these.
+We have had no prior discussions with a `{r} journal$name` editorial Board Member about the work described in the manuscript.
+
+The two individuals named below would be well qualified to serve as reviewers of this manuscript:
+
+::: {#recommend}
+:::
+
+Finally we respectfully request that you exclude
+`{r} reviewers$exclude[[1]]$title` `{r} reviewers$exclude[[1]]$name`, `{r} reviewers$exclude[[1]]$affiliation`
+and
+`{r} reviewers$exclude[[2]]$title` `{r} reviewers$exclude[[2]]$name`, `{r} reviewers$exclude[[2]]$affiliation`
+as referees, since they have exhibited bias against our work in the past.
+
+::: {#exclude}
+:::
