@@ -1,4 +1,4 @@
--- Add to _extensions/quarto-journals/elsevier/_extension.yml
+-- Add to _extensions/quarto-journals/{journal name}/_extension.yml
 local roles_output = pandoc.Inlines({}) -- 役割情報を格納するInlines
 
 -- authors から name の initials と role を取得する関数
@@ -20,9 +20,12 @@ local function extract_roles(meta)
         end
 
         -- 名前のinitialsを取得
-        local given = pandoc.utils.stringify(author.name.given)
         local family = pandoc.utils.stringify(author.name.family)
-        local initials = given:sub(1, 1) .. family:sub(1, 1) .. ": "
+        local given_full = pandoc.utils.stringify(author.name.given)
+        local given, middle = given_full:match("([^ ]+) (.+)")
+        given = given or given_full
+        middle = middle or ""
+        local initials = given:sub(1, 1) .. middle:sub(1, 1) .. family:sub(1, 1) .. ": "
 
         -- initials を太字にする
         local bold_initials = pandoc.Strong(pandoc.Str(initials))
