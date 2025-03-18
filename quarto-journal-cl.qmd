@@ -35,6 +35,8 @@ reviewers:
 
 format:
   jcletter-pdf:
+    wrap: preserve
+    keep-tex: true
     execute:
       eval: true
       echo: false
