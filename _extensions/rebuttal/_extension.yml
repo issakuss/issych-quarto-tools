@@ -1,0 +1,35 @@
+title: Rebuttal Letter
+author: Issaku Kawashima
+version: 0.0.1
+contributes:
+  formats:
+    common:
+      filters:
+        - filter.lua
+    pdf:
+      documentclass: scrartcl
+      geometry:
+        - "margin=1in"
+        # - "bottom=1in"
+        # - "left=1in"
+        # - "right=1in"
+      colorlinks: true
+      keep-tex: true
+      include-in-header:
+        text: |
+
+          \usepackage{tcolorbox}
+          % シンプルな枠線の定義
+          \newtcolorbox{reviewerbox}{
+            % sharp corners,                % 角を丸めない
+            colback=white,                % 背景は白
+            colframe=black,               % 枠線は黒
+            % boxrule=0.5pt,                % 線の太さ
+            fontupper=\itshape,           % 中身をイタリックにする
+            before skip=12pt,             % 前後の余白
+            after skip=12pt
+          }
+
+          \usepackage{longtable}
+          \usepackage{booktabs}
+          \usepackage{array}
