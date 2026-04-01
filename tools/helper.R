@@ -124,17 +124,19 @@ NumRenderer <- function(sdgt_general,
     abbr_ngto_head = abbr_ngto_head
   )
 
-  obj$rnd <- function(val, n_sdgt) {
+ obj$rnd <- function(val, n_sdgt) {
     # 数値を丸める
     if (as.numeric(val) == 1) {
       return(paste0("1.", strrep("0", n_sdgt)))
     }
-    as.numeric(val)
     rounded <- round(as.numeric(val), n_sdgt)
     if(rounded == 0) {
       return(paste0("0.", strrep("0", n_sdgt)))
     }
     rounded <- format(round(as.numeric(val), n_sdgt))
+    if (!grepl("\\.", rounded)) {
+      rounded <- paste0(rounded, ".0")
+    }
     sdgt <- strsplit(rounded, "\\.")[[1]][2]
     n_short <- n_sdgt - nchar(sdgt)
     if (n_short > 0) {
