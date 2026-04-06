@@ -24,7 +24,7 @@ The authors state that the Animagus Registry is an exhaustive record of all prac
 
 Thank you for this crucial observation. We agree that the distinction between registered and unregistered Animagi is vital for a comprehensive history. We have updated the introduction and the "Ministry Oversight" section to include the notable cases of the 'Marauders' cohort.
 
-::: {.change}
+::: {.changed}
 
 ::: {.loc}
 Page 3, Line 45
@@ -48,7 +48,7 @@ The description of the transformation process is somewhat vague. Specifically, t
 
 We appreciate this suggestion. We have added a new subsection, "The Mandrake Protocol," providing a detailed account of the physiological and psychological challenges of the transformation process.
 
-::: {.change}
+::: {.changed}
 
 ::: {.loc}
 Page 7, Section 2.3
@@ -90,7 +90,7 @@ The case of Peter Pettigrew (who remained in rat form for twelve years) provides
 
 This is a fascinating point that aligns with our secondary research interest in cognitive neuroscience. We have added a paragraph discussing the "Pettigrew Effect," where long-term transformation may result in a significant shift toward animalistic behavioral patterns.
 
-::: {.change}
+::: {.changed}
 
 ::: {.loc}
 Page 15, Discussion
@@ -102,6 +102,24 @@ Pettigrew's case is primarily seen as a failure of Ministry detection.
 
 ::: {.after}
 Pettigrew's twelve-year residence as a common garden rat suggests a potential **'identity erosion'**, where human cognitive structures are increasingly dominated by the instincts of the animal form.
+:::
+
+:::
+
+::: {.comment}
+The legal section would benefit from a discussion on how the Ministry attempted to develop detection spells to identify unregistered Animagi, specifically focusing on the failure of the 'Homenum Revelio' spell in certain cases.
+:::
+
+We agree that the technical limitations of Ministry detection are central to the legal history. We have added a new subsection titled "Detection and Countermeasures" to address this.
+
+::: {.added}
+
+::: {.loc}
+Page 11, Section 4.1
+:::
+
+::: {.after}
+**4.1 Detection and Countermeasures.** We have added a new paragraph describing the Ministry's failed attempts to use a modified *Homenum Revelio* to detect Animagi. The evidence suggests that the spell often fails to distinguish between a natural animal and a magically transformed human unless the caster is specifically searching for an Animagus signature.
 :::
 
 :::
